@@ -4,7 +4,7 @@ import { userSchema } from "../schemas/user.ts";
 import type { z } from "zod/v4";
 import { isValidObjectId, type Types } from "mongoose";
 
-type UserInputDTO = z.input<typeof userSchema>;
+type UserInputDTO = z.infer<typeof userSchema>;
 type UserDTO = UserInputDTO & {
   _id: InstanceType<typeof Types.ObjectId>;
   createdAt: Date;
