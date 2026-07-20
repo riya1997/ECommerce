@@ -10,9 +10,7 @@ git clone https://github.com/riya1997/ECommerce.git
 Install dependencies
 npm install
 
-Create your local env file
-cp .env
-then fill in MONGODB_URI & port
+Create your local env file & add MONGODB_URI & port
 
 Start development
 npm run dev
