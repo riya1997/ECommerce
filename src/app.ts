@@ -1,6 +1,11 @@
 import express from "express";
 import connectDb from "./db/index.ts";
-import { categoryRoutes, productRoutes, userRoutes } from "./routes/index.ts";
+import {
+  categoryRoutes,
+  orderRoutes,
+  productRoutes,
+  userRoutes,
+} from "./routes/index.ts";
 import cors from "cors";
 
 const app = express();
@@ -17,6 +22,7 @@ app.get("/", (req, res) => {
 app.use("/api/users", userRoutes);
 app.use("/api/category", categoryRoutes);
 app.use("/api/products", productRoutes);
+app.use("/api/orders", orderRoutes);
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
