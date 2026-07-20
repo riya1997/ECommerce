@@ -5,9 +5,7 @@
   "main": "dist/app.js",
   "scripts": {
     "dev": "node --watch --conditions development --env-file=src/.env src/app.ts",
-    "prebuild": "rm -rf dist",
     "build": "npx tsc",
-    "prestart": "npm run build",
     "start": "cd dist && node app.js"
   },
   "keywords": [],
